@@ -32,5 +32,5 @@ COPY --from=models-installer /models /app/models
 COPY --from=dependencies-installer /app/.venv .venv
 ENV PATH=/app/.venv/bin:$PATH
 COPY /app ./app
-COPY /tts ./tts
+#COPY /tts ./tts
 CMD ["litestar", "run", "--host", "0.0.0.0", "--port", "8000"]
